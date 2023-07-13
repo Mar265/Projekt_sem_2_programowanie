@@ -16,11 +16,11 @@
         <TextBox x:Name="age_txt" HorizontalAlignment="Left" Margin="106,124,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="22"/>
         <TextBox x:Name="gender_txt" HorizontalAlignment="Left" Margin="106,164,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="22"/>
         <TextBox x:Name="city_txt" HorizontalAlignment="Left" Margin="106,204,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="22"/>
-        <DataGrid x:Name="datagrid" HorizontalAlignment="Left" Margin="330,80,0,166" Width="421" />
         <Button x:Name= "InsertBtn" Content="Insert Record" HorizontalAlignment="Left" Margin="70,352,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3" Click="InsertBtn_Click"/>
         <Button x:Name= "UpdateBtn" Content="Update Record" HorizontalAlignment="Left" Margin="200,352,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3"/>
         <Button x:Name= "DeleteBtn" Content="Delete Record" HorizontalAlignment="Left" Margin="330,352,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3"/>
         <Button x:Name= "ClearBtn" Content="Clear Data" HorizontalAlignment="Left" Margin="460,352,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3" Click="ClearBtn_Click"/>
+        <DataGrid x:Name="datagrid" AutoGenerateColumns="True" Margin="355,80,53,199" />
 
 
     </Grid>
