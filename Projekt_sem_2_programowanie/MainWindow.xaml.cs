@@ -81,14 +81,27 @@ namespace Projekt_sem_2_programowanie
         }
         private void InsertBtn_Click(object sender, RoutedEventArgs e)
         {
-            if(isValid())
+           try
             {
-                SqlCommand cmd = new SqlCommand("INSERT INTO Person Values (@Name,@Age,@Gender,@City)"), con;
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.AddWithValue("@Name",name_txt.Text);
-                cmd.Parameters.AddWithValue("@Age",age_txt.Text);
-                cmd.Parameters.AddWithValue("@Gender",gender_txt.Text);
-                cmd.Parameters.AddWithValue("@City",city_txt.Text);
+                if (isValid())
+                {
+                    SqlCommand cmd = new SqlCommand("INSERT INTO Person Values (@Name,@Age,@Gender,@City)", con);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@Name", name_txt.Text);
+                    cmd.Parameters.AddWithValue("@Age", age_txt.Text);
+                    cmd.Parameters.AddWithValue("@Gender", gender_txt.Text);
+                    cmd.Parameters.AddWithValue("@City", city_txt.Text);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    LoadGrid();
+                    MessageBox.Show("Successfully registered", "Saved", MessageBoxButton.OK, MessageBoxImage.Information);
+                    clearData();
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
