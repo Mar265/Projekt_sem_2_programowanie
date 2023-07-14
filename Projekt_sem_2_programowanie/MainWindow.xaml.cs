@@ -130,5 +130,28 @@ namespace Projekt_sem_2_programowanie
             }
 
         }
+
+        private void UpdateBtn_Click(object sender, RoutedEventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("update Person set Name = '"+name_txt.Text+"', Age = '"+age_txt.Text+"',Gender = ' "+gender_txt.Text+"',City = '"+ city_txt.Text + "'WHERE ID = '"+search_txt.Text+"' ", con);
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Record has been updated successfully", "Update", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch( SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+                clearData();
+                LoadGrid();
+                
+                
+            }
+        } 
     }
 }
