@@ -38,6 +38,7 @@ namespace Projekt_sem_2_programowanie
             age_txt.Clear();
             gender_txt.Clear();
             city_txt.Clear();
+            search_txt.Clear();
         }
 
         public void LoadGrid()
@@ -105,6 +106,29 @@ namespace Projekt_sem_2_programowanie
             }
         }
 
-       
+        private void DeleteBtn_Click(object sender, RoutedEventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("delete from Person where ID = "+ search_txt.Text+" ", con);
+
+            try
+            {
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Record has been deleted","Deleted", MessageBoxButton.OK,MessageBoxImage.Information);
+                con.Close() ;
+                clearData();
+                LoadGrid();
+                con.Close();
+            }
+            catch(SqlException ex)
+            {
+                MessageBox.Show("Not Deleted"+ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
     }
 }

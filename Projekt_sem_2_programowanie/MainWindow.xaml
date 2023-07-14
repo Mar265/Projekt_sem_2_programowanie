@@ -18,10 +18,11 @@
         <TextBox x:Name="city_txt" HorizontalAlignment="Left" Margin="106,204,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="22"/>
         <Button x:Name= "InsertBtn" Content="Insert Record" HorizontalAlignment="Left" Margin="70,352,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3" Click="InsertBtn_Click"/>
         <Button x:Name= "UpdateBtn" Content="Update Record" HorizontalAlignment="Left" Margin="200,352,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3"/>
-        <Button x:Name= "DeleteBtn" Content="Delete Record" HorizontalAlignment="Left" Margin="330,352,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3"/>
+        <Button x:Name= "DeleteBtn" Content="Delete Record" HorizontalAlignment="Left" Margin="330,352,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3" Click="DeleteBtn_Click"/>
         <Button x:Name= "ClearBtn" Content="Clear Data" HorizontalAlignment="Left" Margin="460,352,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3" Click="ClearBtn_Click"/>
         <DataGrid x:Name="datagrid" AutoGenerateColumns="True" Margin="355,80,53,199" />
-
+        <Label Content="ID" HorizontalAlignment="Left" Margin="200,283,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="search_txt" HorizontalAlignment="Left" Margin="230,290,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="22"/>
 
     </Grid>
 </Window>
