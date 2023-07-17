@@ -30,7 +30,7 @@
         <Label Content="ID" HorizontalAlignment="Right" Margin="0,0,893,145" VerticalAlignment="Bottom" FontSize="16"/>
         <TextBox x:Name="search_txt" Margin="0,0,691,147" TextWrapping="Wrap"  Text="" HorizontalAlignment="Right" Width="187" Height="27" VerticalAlignment="Bottom"/>
         <Image HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="138" Height="185" Source="/wseilogo.png" Opacity="0.5" Margin="0,0,10,18"/>
-        <Button x:Name="btnOpenWindow2" Content="Open Window 2" HorizontalAlignment="Left" Margin="867,80,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3" Click="btnOpenWindow2_Click"/>
-        <Button x:Name="btnOpenWindow3" Content="Open Window 3" HorizontalAlignment="Left" Margin="867,128,0,0" VerticalAlignment="Top"  Height="36" Width="90" Background="#FF52B4E3" Click="btnOpenWindow3_Click"   />
+        <Button x:Name="btnOpenWindow2" Content="Maszyny" HorizontalAlignment="Left" Margin="867,80,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3" Click="btnOpenWindow2_Click"/>
+        <Button x:Name="btnOpenWindow3" Content="Awarie" HorizontalAlignment="Left" Margin="867,128,0,0" VerticalAlignment="Top"  Height="36" Width="90" Background="#FF52B4E3" Click="btnOpenWindow3_Click"   />
     </Grid>
 </Window>

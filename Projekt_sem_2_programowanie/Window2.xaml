@@ -7,9 +7,10 @@
         mc:Ignorable="d"
         Title="Window2" Height="564" Width="981" ResizeMode="NoResize" Background="AliceBlue">
     <Grid>
-        <Button Name="btnOpenWindow1" Content="Open Window 1" HorizontalAlignment="Left" Margin="867,80,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3"  Click="btnOpenWindow1_Click"  />
-        <Button Name="btnOpenWindow3" Content="Open Window 3" HorizontalAlignment="Left" Margin="867,128,0,0" VerticalAlignment="Top"  Height="36" Width="90" Background="#FF52B4E3"   Click="btnOpenWindow3_Click"  />
-        <Label Content="Stan posiadanych maszyn" HorizontalAlignment="Left" Height="40" Margin="389,20,0,0" VerticalAlignment="Top" Width="219"/>
-        <DataGrid x:Name="datagrid2" AutoGenerateColumns="True" Margin="265,78,143,200" />
+        <Button Name="btnOpenWindow1" Content="Użytkownicy" HorizontalAlignment="Left" Margin="867,80,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3"  Click="btnOpenWindow1_Click"  />
+        <Button Name="btnOpenWindow3" Content="Awarie" HorizontalAlignment="Left" Margin="867,128,0,0" VerticalAlignment="Top"  Height="36" Width="90" Background="#FF52B4E3"   Click="btnOpenWindow3_Click"  />
+        <Label Content="Stan posiadanych maszyn" HorizontalAlignment="Left" Height="42" Margin="389,18,0,0" VerticalAlignment="Top" Width="272" FontSize="20"/>
+        <DataGrid x:Name="datagrid2" AutoGenerateColumns="True" Margin="161,65,205,188" />
+        <Label Content="" HorizontalAlignment="Left" Margin="76,391,0,0" VerticalAlignment="Top" Height="75" Width="318"/>
     </Grid>
 </Window>
