@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Demag.jpg" />
+    <None Remove="Engel.jpg" />
     <None Remove="wseilogo.png" />
   </ItemGroup>
 
@@ -16,6 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Demag.jpg" />
+    <Resource Include="Engel.jpg" />
     <Resource Include="wseilogo.png" />
   </ItemGroup>
 

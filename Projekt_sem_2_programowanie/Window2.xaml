@@ -9,8 +9,8 @@
     <Grid>
         <Button Name="btnOpenWindow1" Content="Użytkownicy" HorizontalAlignment="Left" Margin="867,80,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3"  Click="btnOpenWindow1_Click"  />
         <Button Name="btnOpenWindow3" Content="Awarie" HorizontalAlignment="Left" Margin="867,128,0,0" VerticalAlignment="Top"  Height="36" Width="90" Background="#FF52B4E3"   Click="btnOpenWindow3_Click"  />
-        <Label Content="Stan posiadanych maszyn" HorizontalAlignment="Left" Height="42" Margin="389,18,0,0" VerticalAlignment="Top" Width="272" FontSize="20"/>
+        <Label Content="Stan posiadanych maszyn" HorizontalAlignment="Left" Height="50" Margin="297,10,0,0" VerticalAlignment="Top" Width="452" FontSize="30" FontWeight="Bold"/>
         <DataGrid x:Name="datagrid2" AutoGenerateColumns="True" Margin="161,65,205,188" />
-        <Label Content="" HorizontalAlignment="Left" Margin="76,391,0,0" VerticalAlignment="Top" Height="75" Width="318"/>
+        <Image HorizontalAlignment="Left" Height="166" Margin="289,376,0,0" VerticalAlignment="Top" Width="341" Source="/Demag.jpg" Opacity="0.6"/>
     </Grid>
 </Window>

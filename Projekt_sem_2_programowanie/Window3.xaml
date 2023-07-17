@@ -20,6 +20,8 @@
 
         <Label Content="Koszt Awarii:" HorizontalAlignment="Left" Margin="10,390,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="KosztAwarii" HorizontalAlignment="Left" Height="23" Margin="10,410,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Image HorizontalAlignment="Left" Height="272" Margin="594,260,0,0" VerticalAlignment="Top" Width="368" Source="/Engel.jpg" Opacity="0.8"/>
+        <TextBlock HorizontalAlignment="Left" Height="65" Margin="490,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" FontSize="22" FontWeight="Bold"><Run Language="pl-pl" Text="Zgłoszenie Awarii"/></TextBlock>
 
     </Grid>
 </Window>

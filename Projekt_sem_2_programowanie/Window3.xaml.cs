@@ -19,6 +19,8 @@ namespace Projekt_sem_2_programowanie
     /// <summary>
     /// Logika interakcji dla klasy Window3.xaml
     /// </summary>
+    /// 
+    //Okno nr 3 służące do zgłaszania awarii dla danych maszyn 
     public partial class Window3 : Window
     {
         public Window3()
@@ -39,6 +41,7 @@ namespace Projekt_sem_2_programowanie
             dataGrid.ItemsSource = dt.DefaultView;
         }
 
+        //Sprawdzenie czy żadne pole nie jest puste
         public bool isValid()
         {
             if (WtryskarkaText.Text == string.Empty)
@@ -59,8 +62,7 @@ namespace Projekt_sem_2_programowanie
             }
             return true;
         }
-
-
+        //Potwierdzenie Operacji
         private void InsertButton_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -68,9 +70,9 @@ namespace Projekt_sem_2_programowanie
                 if (isValid())
                 {
 
-                    SqlCommand cmd = new SqlCommand("INSERT INTO Awarie (Wtryskarka_Id, Person_Name, KosztAwarii) VALUES (@Wtryskarka_Id, @Person_Name, @KosztAwarii)", con);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO Awarie (nrMaszyny, Person_Name, KosztAwarii) VALUES (@nrMaszyny, @Person_Name, @KosztAwarii)", con);
                     cmd.CommandType = CommandType.Text;
-                    cmd.Parameters.AddWithValue("@Wtryskarka_Id", WtryskarkaText.Text);
+                    cmd.Parameters.AddWithValue("@nrMaszyny", WtryskarkaText.Text);
                     cmd.Parameters.AddWithValue("@Person_Name", PersonName.Text);
                     cmd.Parameters.AddWithValue("@KosztAwarii", KosztAwarii.Text);
                     con.Open();

@@ -22,6 +22,12 @@ namespace Projekt_sem_2_programowanie
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+
+
+
+    //Okno główne pozwala nam zarządzać pracownikami
+    // oraz wyświetla wszystkich pracowników
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -56,7 +62,7 @@ namespace Projekt_sem_2_programowanie
         {
             clearData();
         }
-
+        //Sprawdzenie czy żadne pole nie jest puste
         public bool isValid()
         {
             if (name_txt.Text == string.Empty)
@@ -87,6 +93,7 @@ namespace Projekt_sem_2_programowanie
           
             return true;
         }
+        //Potwierdzenie Operacji
         private void InsertBtn_Click(object sender, RoutedEventArgs e)
         {
            try
@@ -116,6 +123,7 @@ namespace Projekt_sem_2_programowanie
             }
         }
 
+        //Usunięcie rejestru (pracownika)
         private void DeleteBtn_Click(object sender, RoutedEventArgs e)
         {
             con.Open();
@@ -140,7 +148,7 @@ namespace Projekt_sem_2_programowanie
             }
 
         }
-
+        //zamiana rejestru (danych pracownika) 
         private void UpdateBtn_Click(object sender, RoutedEventArgs e)
         {
             con.Open();

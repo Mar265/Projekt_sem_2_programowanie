@@ -20,6 +20,9 @@ namespace Projekt_sem_2_programowanie
     /// <summary>
     /// Logika interakcji dla klasy Window2.xaml
     /// </summary>
+    /// 
+
+    //Okno nr 2 Pozwala nam przejrzeć stan maszyn jakie są na wyposażeniu np.: zakładu
     public partial class Window2 : Window
     {
         public Window2()
