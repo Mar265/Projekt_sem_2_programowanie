@@ -39,6 +39,7 @@ namespace Projekt_sem_2_programowanie
             gender_txt.Clear();
             city_txt.Clear();
             search_txt.Clear();
+            position_txt.Clear();
         }
 
         public void LoadGrid()
@@ -65,19 +66,25 @@ namespace Projekt_sem_2_programowanie
             }
             if (age_txt.Text == string.Empty)
             {
-                MessageBox.Show("Name is required", "Failed", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Age is required", "Failed", MessageBoxButton.OK, MessageBoxImage.Error);
                 return false;
             }
             if (gender_txt.Text == string.Empty)
             {
-                MessageBox.Show("Name is required", "Failed", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Gender is required", "Failed", MessageBoxButton.OK, MessageBoxImage.Error);
                 return false;
             }
             if (city_txt.Text == string.Empty)
             {
-                MessageBox.Show("Name is required", "Failed", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("City is required", "Failed", MessageBoxButton.OK, MessageBoxImage.Error);
                 return false;
             }
+            if (position_txt.Text== string.Empty)
+            {
+                MessageBox.Show("Position is required", "Failed", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+          
             return true;
         }
         private void InsertBtn_Click(object sender, RoutedEventArgs e)
@@ -86,12 +93,15 @@ namespace Projekt_sem_2_programowanie
             {
                 if (isValid())
                 {
-                    SqlCommand cmd = new SqlCommand("INSERT INTO Person Values (@Name,@Age,@Gender,@City)", con);
+                    SqlCommand cmd = new SqlCommand("INSERT INTO Person Values (@Name,@Age,@Gender,@City,@Position)", con);
                     cmd.CommandType = CommandType.Text;
                     cmd.Parameters.AddWithValue("@Name", name_txt.Text);
                     cmd.Parameters.AddWithValue("@Age", age_txt.Text);
                     cmd.Parameters.AddWithValue("@Gender", gender_txt.Text);
                     cmd.Parameters.AddWithValue("@City", city_txt.Text);
+                    cmd.Parameters.AddWithValue("@Position", position_txt.Text);
+                   
+
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
@@ -134,7 +144,15 @@ namespace Projekt_sem_2_programowanie
         private void UpdateBtn_Click(object sender, RoutedEventArgs e)
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("update Person set Name = '"+name_txt.Text+"', Age = '"+age_txt.Text+"',Gender = ' "+gender_txt.Text+"',City = '"+ city_txt.Text + "'WHERE ID = '"+search_txt.Text+"' ", con);
+            SqlCommand cmd = new SqlCommand("update Person set Name = @Name, Age = @Age, Gender = @Gender, City = @City, Position = @Position ", con);
+            cmd.Parameters.AddWithValue("@Name", name_txt.Text);
+            cmd.Parameters.AddWithValue("@Age", age_txt.Text);
+            cmd.Parameters.AddWithValue("@Gender", gender_txt.Text);
+            cmd.Parameters.AddWithValue("@City", city_txt.Text);
+            cmd.Parameters.AddWithValue("@Position", position_txt.Text);
+           
+            
+            
             try
             {
                 cmd.ExecuteNonQuery();
@@ -150,8 +168,28 @@ namespace Projekt_sem_2_programowanie
                 clearData();
                 LoadGrid();
                 
-                
             }
-        } 
+        }
+
+      
+
+        private void btnOpenWindow2_Click(object sender, RoutedEventArgs e)
+        {
+            Window2 window2 = new Window2();
+            window2.Show();
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window != window2)
+                {
+                    window.Close();
+                }
+            }
+        }
+
+        //private void btnOpenWindow3_Click(object sender, RoutedEventArgs e)
+        //{
+        //    Window3 window3 = new Window3();
+        //    window3.Show();
+        //}
     }
 }

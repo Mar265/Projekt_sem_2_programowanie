@@ -5,24 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekt_sem_2_programowanie"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Label Content="Projekt Semestralny&#xD;&#xA;" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Height="43" Width="244"/>
+        Title="MainWindow" Height="564" Width="981" ResizeMode="NoResize" Background="AliceBlue">
+
+    <Grid Margin="0,0,10,-6">
+
+        <Label Content="Projekt Semestralny&#xD;&#xA;" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" Height="43" Width="244"/>
         <Label Content="Name" HorizontalAlignment="Left" Margin="40,80,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Label Content="Age" HorizontalAlignment="Left" Margin="40,120,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Label Content="Gender" HorizontalAlignment="Left" Margin="40,160,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Label Content="City" HorizontalAlignment="Left" Margin="40,200,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Position" HorizontalAlignment="Left" Margin="40,240,0,0" VerticalAlignment="Top" FontSize="16"/>
+
         <TextBox x:Name="name_txt" HorizontalAlignment="Left" Margin="106,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="22" />
         <TextBox x:Name="age_txt" HorizontalAlignment="Left" Margin="106,124,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="22"/>
         <TextBox x:Name="gender_txt" HorizontalAlignment="Left" Margin="106,164,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="22"/>
         <TextBox x:Name="city_txt" HorizontalAlignment="Left" Margin="106,204,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="22"/>
-        <Button x:Name= "InsertBtn" Content="Insert Record" HorizontalAlignment="Left" Margin="70,352,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3" Click="InsertBtn_Click"/>
-        <Button x:Name= "UpdateBtn" Content="Update Record" HorizontalAlignment="Left" Margin="200,352,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3" Click="UpdateBtn_Click"/>
-        <Button x:Name= "DeleteBtn" Content="Delete Record" HorizontalAlignment="Left" Margin="330,352,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3" Click="DeleteBtn_Click"/>
-        <Button x:Name= "ClearBtn" Content="Clear Data" HorizontalAlignment="Left" Margin="460,352,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3" Click="ClearBtn_Click"/>
-        <DataGrid x:Name="datagrid" AutoGenerateColumns="True" Margin="355,80,53,199" />
-        <Label Content="ID" HorizontalAlignment="Left" Margin="200,283,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <TextBox x:Name="search_txt" HorizontalAlignment="Left" Margin="230,290,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="22"/>
+        <TextBox x:Name="position_txt" HorizontalAlignment="Left" Margin="106,244,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" Height="22"/>
+
+        <Button x:Name= "InsertBtn" Content="Insert Record" HorizontalAlignment="Left" Margin="31,425,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3" Click="InsertBtn_Click"/>
+        <Button x:Name= "UpdateBtn" Content="Update Record" HorizontalAlignment="Left" Margin="161,425,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3" Click="UpdateBtn_Click"/>
+        <Button x:Name= "DeleteBtn" Content="Delete Record" HorizontalAlignment="Left" Margin="291,425,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3" Click="DeleteBtn_Click"/>
+        <Button x:Name= "ClearBtn" Content="Clear Data" HorizontalAlignment="Left" Margin="421,425,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3" Click="ClearBtn_Click"/>
+        <DataGrid x:Name="datagrid" AutoGenerateColumns="True" Margin="265,78,143,200" />
+        <Label Content="ID" HorizontalAlignment="Right" Margin="0,0,893,145" VerticalAlignment="Bottom" FontSize="16"/>
+        <TextBox x:Name="search_txt" Margin="0,0,691,147" TextWrapping="Wrap"  Text="" HorizontalAlignment="Right" Width="187" Height="27" VerticalAlignment="Bottom"/>
+        <Image HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="138" Height="185" Source="/wseilogo.png" Opacity="0.5" Margin="0,0,10,18"/>
+        <Button x:Name="btnOpenWindow2" Content="Open Window 2" HorizontalAlignment="Left" Margin="873,80,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3" Click="btnOpenWindow2_Click"/>
 
     </Grid>
 </Window>
