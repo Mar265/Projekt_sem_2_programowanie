@@ -15,14 +15,15 @@ using System.Windows.Shapes;
 namespace Projekt_sem_2_programowanie
 {
     /// <summary>
-    /// Logika interakcji dla klasy Window2.xaml
+    /// Logika interakcji dla klasy Window3.xaml
     /// </summary>
-    public partial class Window2 : Window
+    public partial class Window3 : Window
     {
-        public Window2()
+        public Window3()
         {
             InitializeComponent();
         }
+
         private void btnOpenWindow1_Click(object sender, RoutedEventArgs e)
         {
             MainWindow window1 = new MainWindow();
@@ -36,13 +37,13 @@ namespace Projekt_sem_2_programowanie
             }
         }
 
-        private void btnOpenWindow3_Click(object sender, RoutedEventArgs e)
+        private void btnOpenWindow2_Click(object sender, RoutedEventArgs e)
         {
-            Window3 window3 = new Window3();
-            window3.Show();
+            Window2 window2 = new Window2();
+            window2.Show();
             foreach (Window window in Application.Current.Windows)
             {
-                if (window != window3)
+                if (window != window2)
                 {
                     window.Close();
                 }

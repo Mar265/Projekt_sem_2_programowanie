@@ -1,0 +1,14 @@
+﻿<Window x:Class="Projekt_sem_2_programowanie.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt_sem_2_programowanie"
+        mc:Ignorable="d"
+        Title="Window3" Height="564" Width="981" ResizeMode="NoResize" Background="AliceBlue">
+    <Grid>
+        <Button Name="btnOpenWindow1" Content="Open Window 1"   HorizontalAlignment="Left" Margin="867,80,0,0" VerticalAlignment="Top" Height="36" Width="90" Background="#FF52B4E3"  Click="btnOpenWindow1_Click"  />
+        <Button x:Name="btnOpenWindow2" Content="Open Window 2" HorizontalAlignment="Left" Margin="867,128,0,0" VerticalAlignment="Top"  Height="36" Width="90" Background="#FF52B4E3"  Click="btnOpenWindow2_Click"/>
+
+    </Grid>
+</Window>

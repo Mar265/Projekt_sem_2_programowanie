@@ -151,8 +151,6 @@ namespace Projekt_sem_2_programowanie
             cmd.Parameters.AddWithValue("@City", city_txt.Text);
             cmd.Parameters.AddWithValue("@Position", position_txt.Text);
            
-            
-            
             try
             {
                 cmd.ExecuteNonQuery();
@@ -170,9 +168,6 @@ namespace Projekt_sem_2_programowanie
                 
             }
         }
-
-      
-
         private void btnOpenWindow2_Click(object sender, RoutedEventArgs e)
         {
             Window2 window2 = new Window2();
@@ -185,11 +180,18 @@ namespace Projekt_sem_2_programowanie
                 }
             }
         }
+        private void btnOpenWindow3_Click(object sender, RoutedEventArgs e)
+        {
+            Window3 window3 = new Window3();
+            window3.Show();
+            foreach (Window window in Application.Current.Windows)
+            {
+                if (window != window3)
+                {
+                    window.Close();
+                }
+            }
+        }
 
-        //private void btnOpenWindow3_Click(object sender, RoutedEventArgs e)
-        //{
-        //    Window3 window3 = new Window3();
-        //    window3.Show();
-        //}
     }
 }
