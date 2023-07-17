@@ -38,22 +38,54 @@ namespace Projekt_sem_2_programowanie
             con.Close();
             dataGrid.ItemsSource = dt.DefaultView;
         }
-        
+
+        public bool isValid()
+        {
+            if (WtryskarkaText.Text == string.Empty)
+            {
+                MessageBox.Show("Wtryskarka is required", "Failed", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+            if (PersonName.Text == string.Empty)
+            {
+                MessageBox.Show("PersonName is required", "Failed", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+            if (KosztAwarii.Text == string.Empty)
+            {
+                MessageBox.Show("KosztAwarii is required", "Failed", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+
+            }
+            return true;
+        }
+
 
         private void InsertButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            try
+            {
+                if (isValid())
+                {
 
-            SqlCommand cmd = new SqlCommand("INSERT INTO Awarie (Wtryskarka_Id, Person_Name, KosztAwarii) VALUES (@Wtryskarka_Id, @Person_Name, @KosztAwarii)", con);
-            cmd.CommandType = CommandType.Text;
-            cmd.Parameters.AddWithValue("@Wtryskarka_Id", WtryskarkaText.Text);
-            cmd.Parameters.AddWithValue("@Person_Name", PersonName.Text);
-            cmd.Parameters.AddWithValue("@KosztAwarii", KosztAwarii.Text);
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
-            LoadGrid();
-            MessageBox.Show("New Record Inserted Successfully");
+                    SqlCommand cmd = new SqlCommand("INSERT INTO Awarie (Wtryskarka_Id, Person_Name, KosztAwarii) VALUES (@Wtryskarka_Id, @Person_Name, @KosztAwarii)", con);
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Parameters.AddWithValue("@Wtryskarka_Id", WtryskarkaText.Text);
+                    cmd.Parameters.AddWithValue("@Person_Name", PersonName.Text);
+                    cmd.Parameters.AddWithValue("@KosztAwarii", KosztAwarii.Text);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    LoadGrid();
+                    MessageBox.Show("New Record Inserted Successfully");
+
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
         private void btnOpenWindow1_Click(object sender, RoutedEventArgs e)
         {
